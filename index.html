@@ -15,9 +15,10 @@ sdasdasdasdasd <form onsubmit="onSubmit()">
     <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script>
  console.log('init');
-  function onSubmit(){
+  function onSubmit(event){
   const searchTerm = document.getElementById('searchTerm');
    console.log(searchTerm);
+    event.preventDefault();
   }
 </script>
 </body>
