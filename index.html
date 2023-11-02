@@ -17,10 +17,20 @@
  console.log('init');
   document.getElementById("form").addEventListener('submit', function(event){
     event.preventDefault();
-  console.log('submit');
-    const sth = document.getElementById("searchTerm").value;
-    console.log(sth);
-    console.log(searchTerm.value);
+  $Lightning.use(
+        'c:globalSearch', // name of the Lightning app
+        function(){
+         $Lightning.createComponent(
+          'c:globalSearch',
+          {search: searchTerm.value},
+          'lightningout',
+          function (cmp){
+           console.log('callback');
+          }
+          );
+        },
+        'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos' // Site endpoint
+      );
   })
 
 </script>
