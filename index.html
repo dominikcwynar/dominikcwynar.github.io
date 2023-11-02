@@ -22,7 +22,10 @@
   
   };
 
-  $Lightning.use(
+ 
+  document.getElementById("form").addEventListener('submit', function(event){
+    event.preventDefault();
+     $Lightning.use(
         appName, // name of the Lightning app
         function(){
          $Lightning.createComponent(
@@ -36,9 +39,6 @@
         },
          lightningEndpoint// Site endpoint
       );
-  document.getElementById("form").addEventListener('submit', function(event){
-    event.preventDefault();
-  
   })
 
 </script>
