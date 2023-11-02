@@ -6,25 +6,34 @@
 </head>
 <body>
 hi
+ <form onsubmit="onSubmit()">
+  <input id="searchTerm" type="text" name="searchTerm"/>
+  <input type="submit" />
+ </form>
+ 
 <div id="lightningout"></div>
  
     <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script>
  console.log('init');
-      $Lightning.use(
-        'c:globalSearch', // name of the Lightning app
-        function(){
-         $Lightning.createComponent(
-          'c:globalSearch',
-          {},
-          'lightningout',
-          function (cmp){
-           console.log('callback');
-          }
-          );
-        },
-        'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos' // Site endpoint
-      );
+  function onSubmit(){
+  const searchTerm = document.getElementById('searchTerm');
+   console.log(searchTerm);
+  }
+      // $Lightning.use(
+      //   'c:globalSearch', // name of the Lightning app
+      //   function(){
+      //    $Lightning.createComponent(
+      //     'c:globalSearch',
+      //     {search: "blabla"},
+      //     'lightningout',
+      //     function (cmp){
+      //      console.log('callback');
+      //     }
+      //     );
+      //   },
+      //   'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos' // Site endpoint
+      // );
 </script>
 </body>
 </html>
