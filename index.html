@@ -5,21 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 </head>
 <body>
-sdasdasdasdasd <form onsubmit="onSubmit()">
+<form id="form" ">
   <input id="searchTerm" type="text" name="searchTerm"/>
   <input type="submit" />
- </form>
+</form>
  
 <div id="lightningout"></div>
  
     <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
-<script>
+<script type="text/javascript">
  console.log('init');
-  function onSubmit(event){
-  const searchTerm = document.getElementById('searchTerm');
-   console.log(searchTerm);
-    event.preventDefault();
-  }
+  document.getElementById("form").addEventListener('submit', function(){
+  console.log('submit');
+    const sth = document.getElementById("searchTerm").value;
+    console.log(sth);
+    console.log(searchTerm.value);
+  })
+
 </script>
 </body>
 </html>
