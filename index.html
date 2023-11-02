@@ -15,7 +15,8 @@
     <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script type="text/javascript">
  console.log('init');
-  document.getElementById("form").addEventListener('submit', function(){
+  document.getElementById("form").addEventListener('submit', function(event){
+    event.preventDefault();
   console.log('submit');
     const sth = document.getElementById("searchTerm").value;
     console.log(sth);
