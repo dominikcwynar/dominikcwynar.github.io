@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+hi
+<div id="lightningout"></div>
+ 
+    <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
+<script>
+      function myFunction() {
+        var searchterm = document.getelemnetbyId();
+      $Lightning.use(
+        'c:globalSearch', // name of the Lightning app
+        function () {
+          searchterm: searchterm
+        },
+        'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos' // Site endpoint
+      );
+      }
+</script>
+</body>
+</html>
