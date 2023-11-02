@@ -10,27 +10,35 @@
   <input type="submit" />
 </form>
  
-<div id="lightningout"></div>
+<div id="lightningout" data-lightning-out="true"></div>
  
-    <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
+<script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script type="text/javascript">
- console.log('init');
-  document.getElementById("form").addEventListener('submit', function(event){
-    event.preventDefault();
+  const appName = 'c:globalSearch';
+  const componentName = "c:globComp";
+  const lightningEndpoint = 'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos';
+  const targetElement = document.querySelector("[data-lightning-out]");
+  const componentAttributes = {
+  
+  };
+
   $Lightning.use(
-        'c:globalSearch', // name of the Lightning app
+        appName, // name of the Lightning app
         function(){
          $Lightning.createComponent(
-          'c:globalSearch',
-          {search: searchTerm.value},
-          'lightningout',
+          componentName,
+          componentAttributes,
+          targetElement,
           function (cmp){
-           console.log('callback');
+           console.log('lightning component created');
           }
           );
         },
-        'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos' // Site endpoint
+         lightningEndpoint// Site endpoint
       );
+  document.getElementById("form").addEventListener('submit', function(event){
+    event.preventDefault();
+  
   })
 
 </script>
