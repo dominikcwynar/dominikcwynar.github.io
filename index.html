@@ -20,7 +20,7 @@
   const targetElement = document.querySelector("[data-lightning-out]");
  
   document.getElementById("form").addEventListener('submit', function(event){
-    //event.preventDefault();
+   
    console.log(searchTerm.value);
      $Lightning.use(
         appName, // name of the Lightning app
@@ -38,6 +38,7 @@
         },
          lightningEndpoint// Site endpoint
       );
+     event.preventDefault();
   })
 
 </script>
