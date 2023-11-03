@@ -18,29 +18,26 @@
   const componentName = "c:searchComp";
   const lightningEndpoint = 'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos';
   const targetElement = document.querySelector("[data-lightning-out]");
-  const componentAttributes = {
-    "search": searchTerm.value
-  };
-
  
   document.getElementById("form").addEventListener('submit', function(event){
     event.preventDefault();
     console.log(searchTerm.value);
-    console.log(componentAttributes);
-     // $Lightning.use(
-     //    appName, // name of the Lightning app
-     //    function(){
-     //     $Lightning.createComponent(
-     //      appName,
-     //      componentAttributes,
-     //      targetElement,
-     //      function (cmp){
-     //       console.log('lightning component created');
-     //      }
-     //      );
-     //    },
-     //     lightningEndpoint// Site endpoint
-     //  );
+     $Lightning.use(
+        appName, // name of the Lightning app
+        function(){
+         $Lightning.createComponent(
+          appName,
+          {
+            "search": searchTerm.value
+          },
+          targetElement,
+          function (cmp){
+           console.log('lightning component created');
+          }
+          );
+        },
+         lightningEndpoint// Site endpoint
+      );
   })
 
 </script>
