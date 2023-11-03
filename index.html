@@ -26,20 +26,21 @@
   document.getElementById("form").addEventListener('submit', function(event){
     event.preventDefault();
     console.log(searchTerm.value);
-     $Lightning.use(
-        appName, // name of the Lightning app
-        function(){
-         $Lightning.createComponent(
-          appName,
-          componentAttributes,
-          targetElement,
-          function (cmp){
-           console.log('lightning component created');
-          }
-          );
-        },
-         lightningEndpoint// Site endpoint
-      );
+    console.log(componentAttributes);
+     // $Lightning.use(
+     //    appName, // name of the Lightning app
+     //    function(){
+     //     $Lightning.createComponent(
+     //      appName,
+     //      componentAttributes,
+     //      targetElement,
+     //      function (cmp){
+     //       console.log('lightning component created');
+     //      }
+     //      );
+     //    },
+     //     lightningEndpoint// Site endpoint
+     //  );
   })
 
 </script>
