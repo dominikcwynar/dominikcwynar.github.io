@@ -14,8 +14,8 @@
  
 <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script type="text/javascript">
-  const appName = 'c:globalSearch';
-  const componentName = "c:globalSearch";
+  const appName = 'c:ltngOut';
+  const componentName = "c:ltngOutComponent";
   const lightningEndpoint = 'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos';
   const targetElement = document.querySelector("[data-lightning-out]");
   document.getElementById("form").addEventListener('submit', function(event){
@@ -28,11 +28,10 @@
          $Lightning.createComponent(
           componentName,
           {
-            "search": searchTerm.value
+            "search": "paramparam"
           },
           targetElement,
           function (cmp){
-            cmp.set('v.search', searchTerm.value);
            console.log('lightning component created');
           }
           );
