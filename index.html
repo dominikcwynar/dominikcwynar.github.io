@@ -14,30 +14,7 @@
  
 <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script type="text/javascript">
-  const appName = 'c:LightningOutDependencyApp';
-  const componentName = "c:searchComp";
-  const lightningEndpoint = 'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos';
-  const targetElement = document.querySelector("[data-lightning-out]");
- // document.getElementById("form").addEventListener('submit', function(event){
-     $Lightning.use(
-        appName, // name of the Lightning app
-        function(){
-         $Lightning.createComponent(
-          componentName,
-          {
-            
-          },
-          targetElement,
-          function (cmp){
-           console.log('lightning component created');
-          }
-          );
-        },
-         lightningEndpoint// Site endpoint
-      );
-   // event.preventDefault();
-  //});
-
+ 
 </script>
 </body>
 </html>
