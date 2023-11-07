@@ -18,7 +18,7 @@
   const componentName = "c:searchComp";
   const lightningEndpoint = 'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos';
   const targetElement = document.querySelector("[data-lightning-out]");
-  document.getElementById("form").addEventListener('submit', function(event){
+ // document.getElementById("form").addEventListener('submit', function(event){
      $Lightning.use(
         appName, // name of the Lightning app
         function(){
@@ -35,8 +35,8 @@
         },
          lightningEndpoint// Site endpoint
       );
-    event.preventDefault();
-  });
+   // event.preventDefault();
+  //});
 
 </script>
 </body>
