@@ -23,7 +23,9 @@
         function(){
          $Lightning.createComponent(
           'c:searchComp',
-           {},
+           {
+             "nameToSearch" : 'testString'
+               },
           targetElement,
           function (cmp){
            console.log('lightning component created');
