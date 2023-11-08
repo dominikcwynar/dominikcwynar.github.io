@@ -28,6 +28,7 @@
         if(x===null || x==='')
           alert('Please enter a Last Name');
         else {
+         console.log(x);
          document.getElementById("lightningout").innerHTML = "";
         $Lightning.use(
             'c:testSearchApp', // name of the Lightning app
@@ -35,7 +36,9 @@
               // Callback once framework and app loaded
               $Lightning.createComponent(
                 'c:testSearch', // top-level component of your app
-                {}, // attributes to set on the component when created
+                {
+                 "nameToSearch": x
+                }, // attributes to set on the component when created
                 'lightningout', // the DOM location to insert the component
                 function (cmp) {
                   $A.eventService.addHandler({ "event": "c:MyApplicationEvent", "handler" : eFunction});
