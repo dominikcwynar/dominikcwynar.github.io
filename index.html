@@ -27,8 +27,9 @@
         x = document.getElementById("lname").value;
         if(x===null || x==='')
           alert('Please enter a Last Name');
-        else
-          $Lightning.use(
+        else {
+         document.getElementById("lightningout").innerHTML = "";
+        $Lightning.use(
             'c:testSearchApp', // name of the Lightning app
             function () {
               // Callback once framework and app loaded
@@ -43,6 +44,7 @@
             },
             'https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos' // Site endpoint
           );
+        }
       }
 </script>
 <div id='content'></div>
