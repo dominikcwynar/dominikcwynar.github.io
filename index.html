@@ -13,7 +13,14 @@
 <div id="lightningout"></div>
 <script src="https://oneops-mbm--pocpega.sandbox.my.salesforce-sites.com/cos/lightning/lightning.out.js"></script>
 <script>
-    console.log(document.cookie.split(';'));
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+
+    fetch("https://jsonplaceholder.typicode.com/posts/1")
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+    
       var eFunction = function(event){
         var myEventData1 = event.getParam("myEventData1");
         var myEventData2 = event.getParam("myEventData2");
